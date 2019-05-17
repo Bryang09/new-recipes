@@ -1,0 +1,33 @@
+$color: #a4ffbc;
+// $color: #ffa8fc;
+// $color: #43bffd;
+// $color: #ff5858;
+
+.Hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+      no-repeat center center / cover;
+  display: flex;
+  background-attachment: fixed;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin-left: 5vw;
+    width: 50vw;
+    color: $color;
+    text-transform: capitalize;
+    font-size: 45px;
+    text-align: center;
+  }
+
+  h4 {
+    color: $color;
+    margin-left: 5vw;
+    font-size: 25px;
+    text-align: end;
+    font-weight: 400;
+  }
+}
