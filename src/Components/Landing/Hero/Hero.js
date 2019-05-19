@@ -1,17 +1,21 @@
 import React from "react";
 
 import "./Hero.scss";
+import One from "./One/One";
+import Two from "./Two/Two";
 
 const Hero = props => {
+  const { level, onNext } = props;
+
+  const numLevel = parseInt(level);
+
   return (
     <div className="Hero">
-      <div className="text">
-        <h1>
-          {" "}
-          <q>Let food be thy medicine and medicine be thy foods</q>
-        </h1>
-        <h4>- Hippocrates</h4>
-      </div>
+      {numLevel === 0 ? (
+        <One level={level} onNext={onNext} />
+      ) : (
+        <Two level={level} onNext={onNext} />
+      )}
     </div>
   );
 };
