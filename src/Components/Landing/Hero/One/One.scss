@@ -1,0 +1,37 @@
+$color: #a4ffbc;
+$hover: #47b764;
+
+.One {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: page 1s ease;
+
+  h1 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 45px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  h4 {
+    color: $color;
+    font-size: 25px;
+    text-align: center;
+    // text-align: end;
+    font-weight: 400;
+    border: 1px solid $color;
+    padding: 1vh 2vw;
+    transition: 1s ease;
+    cursor: pointer;
+    width: 30%;
+
+    &:hover {
+      background: $hover;
+      border: 1px solid $hover;
+      color: #fff;
+    }
+  }
+}

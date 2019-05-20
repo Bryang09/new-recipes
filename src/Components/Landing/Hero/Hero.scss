@@ -16,37 +16,17 @@ $hover: #47b764;
   flex-direction: column;
   justify-content: center;
   transition: 1s ease;
-  .One {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .One,
+  .Two {
+    animation: page 1s ease;
+  }
+}
 
-    h1 {
-      color: #fff;
-      text-transform: capitalize;
-      font-size: 45px;
-      text-align: center;
-      font-weight: 400;
-    }
-
-    h4 {
-      color: $color;
-      font-size: 25px;
-      text-align: center;
-      // text-align: end;
-      font-weight: 400;
-      border: 1px solid $color;
-      padding: 1vh 2vw;
-      transition: 1s ease;
-      cursor: pointer;
-      width: 30%;
-
-      &:hover {
-        background: $hover;
-        border: 1px solid $hover;
-        color: #fff;
-      }
-    }
+@keyframes page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

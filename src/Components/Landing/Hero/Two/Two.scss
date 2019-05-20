@@ -1,0 +1,90 @@
+$color: #a4ffbc;
+$hover: #47b764;
+
+$balance: #85006b;
+$fiber: #dc3e3e;
+$protein: #001f3f;
+$carb: #45c798;
+$fat: #4c2c96;
+$sodium: #e2d046;
+
+.Two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    font-size: 35px;
+  }
+
+  .optionContainer {
+    display: flex;
+    width: 70vw;
+    flex-wrap: wrap;
+
+    .option {
+      flex: 1;
+      text-align: center;
+      margin: 0 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: 1s ease;
+      position: relative;
+      z-index: 2;
+
+      h4 {
+        z-index: 1;
+        position: relative;
+      }
+    }
+    .Balanced {
+      background: $balance;
+
+      &:hover {
+        background: lighten($balance, 2%);
+        box-shadow: 1px 1px 15px $balance;
+      }
+    }
+    .High-Fiber {
+      background: $fiber;
+
+      &:hover {
+        background: lighten($fiber, 2%);
+        box-shadow: 1px 1px 15px $fiber;
+      }
+    }
+    .High-Protein {
+      background: $protein;
+
+      &:hover {
+        background: lighten($protein, 2%);
+        box-shadow: 1px 1px 15px $protein;
+      }
+    }
+    .Low-Carb {
+      background: $carb;
+      &:hover {
+        background: lighten($carb, 2%);
+        box-shadow: 1px 1px 15px $carb;
+      }
+    }
+    .Low-Fat {
+      background: $fat;
+
+      &:hover {
+        background: lighten($fat, 2%);
+        box-shadow: 1px 1px 15px $fat;
+      }
+    }
+    .Low-Sodium {
+      background: $sodium;
+
+      &:hover {
+        background: lighten($sodium, 2%);
+        box-shadow: 1px 1px 15px $sodium;
+      }
+    }
+  }
+}

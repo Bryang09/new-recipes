@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./One.scss";
+
 const One = props => {
   const { level, onNext } = props;
   return (
