@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
 import "./Two.scss";
 
 class Two extends Component {
@@ -18,13 +19,17 @@ class Two extends Component {
     const { type } = this.props;
     const mapDiets = diets.map(res => {
       return (
-        <div
-          className={`${res.att} option  ${res.name} `}
-          onClick={type}
-          key={res.id}
-        >
-          <h4 className={res.att}>{res.name}</h4>
-        </div>
+        <>
+          <Link to={`/meals/${res.att}`}>
+            <div
+              className={`${res.att} option  ${res.name} `}
+              onClick={type}
+              key={res.id}
+            >
+              <h4 className={res.att}>{res.name}</h4>
+            </div>
+          </Link>
+        </>
       );
     });
     return (

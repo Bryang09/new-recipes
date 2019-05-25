@@ -23,16 +23,25 @@ $sodium: #e2d046;
     display: flex;
     width: 70vw;
     flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      margin: 0 5px;
+      flex: 1;
+    }
 
     .option {
-      flex: 1;
       text-align: center;
-      margin: 0 5px;
+      // margin: 0 5px;
+      width: 100%;
+      height: 100%;
       color: #fff;
       cursor: pointer;
       transition: 1s ease;
       position: relative;
       z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       h4 {
         z-index: 1;

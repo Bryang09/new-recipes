@@ -1,0 +1,32 @@
+.Three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+    font-size: 35px;
+  }
+
+  .optionContainer {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #fff;
+    align-items: center;
+
+    .option {
+      min-width: 20%;
+      border: 1px solid aqua;
+      flex: 1;
+      text-align: center;
+      color: #fff;
+      margin: 5px;
+
+      h4 {
+        font-weight: 400;
+      }
+    }
+  }
+}
