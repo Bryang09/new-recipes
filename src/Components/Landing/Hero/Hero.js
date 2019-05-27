@@ -6,7 +6,7 @@ import Two from "./Two/Two";
 import Three from "./Three/Three";
 
 const Hero = props => {
-  const { level, onNext, type } = props;
+  const { level, onNext, type, onAdvanced, onType } = props;
 
   const numLevel = parseInt(level);
 
@@ -15,7 +15,21 @@ const Hero = props => {
       {numLevel === 0 ? (
         <One level={level} onNext={onNext} />
       ) : numLevel === 1 ? (
-        <Two level={level} onNext={onNext} type={type} />
+        <Two
+          level={level}
+          onNext={onNext}
+          onType={onType}
+          type={type}
+          advanced={onAdvanced}
+        />
+      ) : numLevel === 2 ? (
+        <Three
+          level={level}
+          onNext={onNext}
+          onType={onType}
+          type={type}
+          advanced={onAdvanced}
+        />
       ) : null}
     </div>
   );

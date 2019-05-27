@@ -1,0 +1,81 @@
+$color: #a4ffbc;
+$hover: #47b764;
+
+.Diets {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background: #e2e7f2;
+  min-height: 100vh;
+  max-height: 100%;
+  flex-direction: column;
+
+  .dietContainer {
+    width: 90vw;
+
+    h1 {
+      text-transform: capitalize;
+    }
+  }
+
+  .dietResults {
+    // height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .dish {
+      flex: 1;
+      height: 40vh;
+      min-width: 18%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 1vh 0.5vw;
+      display: flex;
+
+      .dietInfo {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: 1s ease;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        h4 {
+          color: #fff;
+          font-weight: 400;
+        }
+
+        .labels {
+          display: flex;
+          width: 90%;
+          // justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .label {
+            width: 30%;
+            margin: 1% 1.5%;
+            text-align: center;
+
+            h6 {
+              border: 1px solid $color;
+              margin: 0;
+              color: #fff;
+              font-weight: 400;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,17 +13,27 @@ class Landing extends Component {
   };
 
   onType = e => {
-    this.setState({ type: e.target.classList[0], level: this.state.level + 1 });
+    this.setState({ type: e.target.classList[0] });
+  };
+
+  onAdvanced = () => {
+    this.setState({ level: this.state.level + 1 });
   };
 
   render() {
-    const { level } = this.state;
+    const { level, type } = this.state;
 
     console.log(this.state);
 
     return (
       <div className="Landing">
-        <Hero level={level} onNext={this.onNextLevel} type={this.onType} />
+        <Hero
+          level={level}
+          onNext={this.onNextLevel}
+          onType={this.onType}
+          type={type}
+          onAdvanced={this.onAdvanced}
+        />
       </div>
     );
   }

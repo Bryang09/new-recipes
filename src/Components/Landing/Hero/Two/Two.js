@@ -16,27 +16,30 @@ class Two extends Component {
   };
   render() {
     const { diets } = this.state;
-    const { type } = this.props;
+    const { type, advanced, onType } = this.props;
     const mapDiets = diets.map(res => {
       return (
-        <>
-          <Link to={`/meals/${res.att}`}>
-            <div
-              className={`${res.att} option  ${res.name} `}
-              onClick={type}
-              key={res.id}
-            >
-              <h4 className={res.att}>{res.name}</h4>
-            </div>
-          </Link>
-        </>
+        // <Link to={`/meals/1/${res.att}`} key={res.id}>
+        <div className={`${res.att} option  ${res.name} `} onClick={onType}>
+          <h4 className={res.att}>{res.name}</h4>
+        </div>
+        // </Link>
       );
     });
+    console.log(type);
     return (
       <div className="Two">
         <h1>Diet Type</h1>
-
         <div className="optionContainer">{mapDiets}</div>
+        <div
+          className="optionButtons"
+          style={type.length > 1 ? { display: "flex" } : { display: "none" }}
+        >
+          <h3>
+            <Link to={`/meals/1/${type}`}>Search Now</Link>
+          </h3>
+          <h3 onClick={advanced}>Advanced Search</h3>
+        </div>
       </div>
     );
   }

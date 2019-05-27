@@ -8,7 +8,11 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Landing} />
-      <Route path="/meals/:type" component={Diets} />
+      <Route
+        exact
+        path="/meals/:page/:type/:param1?/:param2?/:param3?"
+        component={Diets}
+      />
     </Switch>
   );
 };
